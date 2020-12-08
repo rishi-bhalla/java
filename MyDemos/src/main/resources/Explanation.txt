@@ -1,0 +1,9 @@
+1. In function swap(), firstly the string is converted into a character array.
+2. Secondly, the characters at ith and jth indexes are interchanged and the character array is finally converted back to string.
+3. In function permute(), firstly the low and high indexes are compared if(low == high), to see if they are equal.
+4. If it is, that means we are processing the last character and no more permutations can be generated. So the string is printed.
+5. The loop for(i = low; i<=high; i++) is used to generate all the permutations of the string.
+6. Firstly, the character at low and i are swapped using swap(str, low, i). Then keeping this character constant, all the other permutations are generated using permute(arr,low+1, high).
+7. Finally, the initially swapped character is swapped back to its original position.
+
+Time Complexity: O(n*(n!) ) where n is the length of the string.

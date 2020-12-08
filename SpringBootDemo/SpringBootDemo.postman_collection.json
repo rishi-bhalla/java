@@ -1,0 +1,194 @@
+{
+	"variables": [],
+	"info": {
+		"name": "SpringBootDemo",
+		"_postman_id": "68aba61d-19cc-e97a-f16e-e54f34600fb3",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Greeting",
+			"description": "",
+			"item": [
+				{
+					"name": "GETGreeting",
+					"request": {
+						"url": {
+							"raw": "{{url}}/greeting?name=rishibhalla",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"greeting"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "rishibhalla",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student",
+			"description": "",
+			"item": [
+				{
+					"name": "GET All Students",
+					"request": {
+						"url": "{{url}}/students",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Student",
+					"request": {
+						"url": "{{url}}/students/Student2",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET All Courses",
+					"request": {
+						"url": "{{url}}/students/Student2/courses",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Course",
+					"request": {
+						"url": "{{url}}/students/Student2/courses/Course2",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "POST Add Course",
+					"request": {
+						"url": "{{url}}/students/Student2/courses",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Test Register Course\",\n    \"description\": \"Testing Registering Course\",\n    \"steps\": [\n        \"Prepare Request Body\",\n        \"Prepare Valid POST Request\",\n        \"Execute through Postman\",\n        \"Verify output\"\n    ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"description": "",
+			"item": [
+				{
+					"name": "GET All Users",
+					"request": {
+						"url": "{{url}}/api/v1/users",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET User By Id",
+					"request": {
+						"url": "{{url}}/api/v1/users/21",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "POST Create User",
+					"request": {
+						"url": "{{url}}/api/v1/users",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\" : \"Rishi\",\n\t\"lastName\" : \"Bhalla\",\n\t\"email\" : \"contact.rishibhalla@gmail.com\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Update User",
+					"request": {
+						"url": "{{url}}/api/v1/users/21",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\" : \"Varan\",\n\t\"lastName\" : \"Bhalla\",\n\t\"email\" : \"contact.rishibhalla@gmail.com\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Delete User",
+					"request": {
+						"url": "{{url}}/api/v1/users/21",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
